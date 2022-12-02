@@ -100,10 +100,10 @@
 
 /*-------- Start Banner Area ------------*/
 .banner-area {
-    background: url(../img/Main_bg.jpg) right;
+    background: url(../img/Main_bg.png) right;
     background-size: cover;
     .overlay-bg {
-        background-color: rgba(#04091e, .8);
+        background-color: rgba(#061657, .8);
     }
 }
 
@@ -635,7 +635,7 @@
 }
 
 .about-banner {
-    background: url(../img/top-banner.jpg) right no-repeat;
+    background: url(../img/Main_bg.png) right no-repeat;
     background-size:cover;
 }
 
