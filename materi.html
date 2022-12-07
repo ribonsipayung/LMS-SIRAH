@@ -61,7 +61,7 @@
 				  <li><a href="index.html">Beranda</a></li>
 				  <li><a href="tentang.html">Tentang Kami</a></li>
 				  <li><a href="materi.html">Materi</a></li>
-				  <li><a href="pelatihan.html">Pelatihan</a></li>
+				  <!-- <li><a href="pelatihan.html">Pelatihan</a></li> -->
 				  <li><a href="kegiatan.html">Kegiatan</a></li>
 				  <!-- <li class="menu-has-children"><a href="">Blog</a>
 					<ul>
@@ -281,14 +281,16 @@
 					</button></li>
 					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="anak">Anak-anak
 					</button></li>
-					<li class="menu-kategori" data-filter=".design"><button class="btn btn-small button1" data-toggle="portfilter" data-target="remaja">Remaja
+					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="remaja">Remaja
 					</button></li>
-					<li class="menu-kategori" data-filter=".web"><button class="btn btn-small button1" data-toggle="portfilter" data-target="ortu">Orang Tua
+					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="ortu">Orang Tua
 					</button></li>
-					<li class="menu-kategori" data-filter=".photo"><button class="btn btn-small button1" data-toggle="portfilter" data-target="lansia">Lansia
+					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="lansia">Lansia
 					</button></li>
+					<li class="menu-kategori"><input type="text" class="form-control" id="myInput" placeholder="Masukan kata kunci"></li>
+					<li class="menu-kategori"><input type="submit" class="btn btn-small" value="Cari"></i></li>
 				</ul>                                       
-				<div class="row course-items-area">
+				<div class="row course-items-area" id="textInput">
 					<!-- course -->
 					<div class="mix col-lg-3 col-md-4 col-sm-6" data-tag="anak">
 						<div class="course-item">
@@ -298,7 +300,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="detail-materi.html">Berdaya Internet</a></h5>
+									<h5 id="textInput"><a class="judul" href="detail-materi.html">Berdaya Internet</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Anak-anak</div>
 								</div>
@@ -579,14 +581,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 cta-left">
-						<h1>AYO BERLATIH MELAWAN HOAX !!</h1>
+						<h1>MARI BERKONTRIBUSI BERSAMA KAMI !!</h1>
 					</div>
 					<div class="col-lg-4 cta-right">
-						<a class="primary-btn wh" href="pelatihan.html">Mulai Berlatih</a>
+						<a class="primary-btn wh" href="hubungi.html">Kirim Materi</a>
 					</div>
 				</div>
 			</div>	
-		</section> -->
+		</section> 
 		<!-- End cta-two Area						    			
 
 		<!-- start footer Area		 -->
@@ -694,6 +696,16 @@
 			$('.set-bg').each(function() {
 				var bg = $(this).data('setbg');
 				$(this).css('background-image', 'url(' + bg + ')');
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("#myInput").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#textInput *").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				});
 			});
 		</script>
 	</body>
