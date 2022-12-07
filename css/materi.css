@@ -99,7 +99,7 @@ a:hover{
 
 .course-item.featured-course {
 	position: relative;
-	margin-bottom: 97px;
+	margin-bottom: 30px;
 }
 
 .course-item.featured-course:last-child {
@@ -184,4 +184,9 @@ input {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.section-fitur {
+	position: relative;
+    margin-bottom: 10px;
 }

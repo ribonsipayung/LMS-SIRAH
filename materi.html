@@ -30,6 +30,10 @@
 		<link rel="stylesheet" href="css/style2.css">			
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/materi.css">
+
+		<style>
+			.is-hidden { display: none; }
+		</style>
 	</head>
 	<body>	
 	  <header id="header" id="home">
@@ -277,7 +281,7 @@
 		<section class="course-section spad pb-0">
 			<div class="course-warp menu-kategori">
 				<ul class="course-filter controls menu-kategori">
-					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="anak">ALL
+					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="all">ALL
 					</button></li>
 					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="anak">Anak-anak
 					</button></li>
@@ -287,8 +291,8 @@
 					</button></li>
 					<li class="menu-kategori"><button class="btn btn-small button1" data-toggle="portfilter" data-target="lansia">Lansia
 					</button></li>
-					<li class="menu-kategori"><input type="text" class="form-control" id="myInput" placeholder="Masukan kata kunci"></li>
-					<li class="menu-kategori"><input type="submit" class="btn btn-small" value="Cari"></i></li>
+					<li class="menu-kategori"><input type="search" oninput="liveSearch()" id="searchbox"  class="form-control" placeholder="Masukan kata kunci"></li>
+					<li class="menu-kategori"><input type="submit" class="btn btn-small" value="Cari"></li>
 				</ul>                                       
 				<div class="row course-items-area" id="textInput">
 					<!-- course -->
@@ -300,7 +304,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5 id="textInput"><a class="judul" href="detail-materi.html">Berdaya Internet</a></h5>
+									<h5 id="textInput1"><a class="judul" href="anak/detail-materi.html">Berdayaa Internet</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Anak-anak</div>
 								</div>
@@ -320,7 +324,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Berdaya Internet</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Berdaya Internet</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Remaja</div>
 								</div>
@@ -340,7 +344,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Berdaya Internet</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Berdaya Internet</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Orang Tua</div>
 								</div>
@@ -360,7 +364,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Berdaya Internet</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Berdaya Internet</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Lansia</div>
 								</div>
@@ -380,7 +384,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Ruang Kelas</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Ruang Kelas</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Anak-anak</div>
 								</div>
@@ -400,7 +404,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Ruang Kelas</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Ruang Kelas</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Remaja</div>
 								</div>
@@ -420,7 +424,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Ruang Kelas</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Ruang Kelas</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Orang Tua</div>
 								</div>
@@ -440,7 +444,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Ruang Kelas</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Ruang Kelas</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Lansia</div>
 								</div>
@@ -459,7 +463,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Kesehatan</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Kesehatan</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Anak-anak</div>
 								</div>
@@ -478,7 +482,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Kesehatan</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Kesehatan</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Remaja</div>
 								</div>
@@ -497,7 +501,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Kesehatan</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Kesehatan</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Orang tua</div>
 								</div>
@@ -516,7 +520,7 @@
 							</div>
 							<div class="course-info">
 								<div class="course-text">
-									<h5><a class="judul" href="#">Internet dan Kesehatan</a></h5>
+									<h5><a class="judul" href="detail-materi.html">Internet dan Kesehatan</a></h5>
 									<p>Mulai dari menjelajahi media digital untuk mencari informasi, mampu memahami pesan serta berbagai perlindungan privasi dan data pribadi, hingga berkolaborasi dengan orang lain melalui teknologi digital.</p>
 									<div class="students">Lansia</div>
 								</div>
@@ -528,54 +532,59 @@
 						</div>
 					</div>
 				</div>
-				<div class="featured-courses">
-					<div class="featured-course course-item">
-						<div class="course-thumb set-bg" data-setbg="img/Img_Pel4.jpg">
-							<!-- <div class="price">Price: $15</div> -->
-						</div>
-						<div class="row">
-							<div class="col-lg-6 offset-lg-6 pl-0">
-								<div class="course-info">
-									<div class="course-text">
-										<div class="fet-note">Materi Populer</div>
-										<h5><a href="#">Internet Damai</a></h5>
-										<p>Dalam tatanan masyarakat demokrasi, media massa memegang peranan penting sebagai sarana diseminasi informasi, baik dari pemerintah ke masyarakat maupun dari masyarakat ke masyarakat</p>
-										<div class="students">Umum</div>
-									</div>
-									<div class="course-author">
-										<div class="ca-pic set-bg" data-setbg="img/abdurahman-wahid.jpg"></div>
-										<p>Tarisa, <span>Kominfo</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
+				
+				</div>
+			</div>
+		</section>
+		<!-- Kategori End-->
+
+		<!-- Materi Populer  -->
+		<section class="section-fitur relative">
+			<div class="featured-courses">
+				<div class="featured-course course-item">
+					<div class="course-thumb set-bg" data-setbg="img/Img_Pel4.jpg">
+						<!-- <div class="price">Price: $15</div> -->
 					</div>
-					<div class="featured-course course-item">
-						<div class="course-thumb set-bg" data-setbg="img/Img_Pel5.jpg">
-							<!-- <div class="price">Price: $15</div> -->
-						</div>
-						<div class="row">
-							<div class="col-lg-6 pr-0">
-								<div class="course-info">
-									<div class="course-text">
-										<div class="fet-note">Materi Unggulan</div>
-										<h5><a href="#">Menjadi Warga Digital</a></h5>
-										<p>Mengeksplorasi media digital agar dapat berpartisipasi secara aktif dalam interaksi masyarakat digital sekaligus mengasah keterampilan analisis dan berpikir kritis mengenai pertukaran wacana di platform digital.</p>
-										<div class="students">Umum</div>
-									</div>
-									<div class="course-author">
-										<div class="ca-pic set-bg" data-setbg="img/abdurahman-wahid.jpg"></div>
-										<p>Tarisa, <span>Tim Mafindo</span></p>
-									</div>
+					<div class="row">
+						<div class="col-lg-6 offset-lg-6 pl-0">
+							<div class="course-info">
+								<div class="course-text">
+									<div class="fet-note">Materi Populer</div>
+									<h5><a href="detail-materi.html">Internet Damai</a></h5>
+									<p>Dalam tatanan masyarakat demokrasi, media massa memegang peranan penting sebagai sarana diseminasi informasi, baik dari pemerintah ke masyarakat maupun dari masyarakat ke masyarakat</p>
+									<div class="students">Umum</div>
+								</div>
+								<div class="course-author">
+									<div class="ca-pic set-bg" data-setbg="img/abdurahman-wahid.jpg"></div>
+									<p>Tarisa, <span>Kominfo</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+				<div class="featured-course course-item">
+					<div class="course-thumb set-bg" data-setbg="img/Img_Pel5.jpg">
+						<!-- <div class="price">Price: $15</div> -->
+					</div>
+					<div class="row">
+						<div class="col-lg-6 pr-0">
+							<div class="course-info">
+								<div class="course-text">
+									<div class="fet-note">Materi Unggulan</div>
+									<h5><a href="detail-materi.html">Menjadi Warga Digital</a></h5>
+									<p>Mengeksplorasi media digital agar dapat berpartisipasi secara aktif dalam interaksi masyarakat digital sekaligus mengasah keterampilan analisis dan berpikir kritis mengenai pertukaran wacana di platform digital.</p>
+									<div class="students">Umum</div>
+								</div>
+								<div class="course-author">
+									<div class="ca-pic set-bg" data-setbg="img/abdurahman-wahid.jpg"></div>
+									<p>Tarisa, <span>Tim Mafindo</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 		</section>
-		<!-- Kategori End-->
-		
+		<!-- End Materi Populer -->
 		<!-- Start cta-two Area -->
 		<section class="cta-two-area">
 			<div class="container">
@@ -589,9 +598,9 @@
 				</div>
 			</div>	
 		</section> 
-		<!-- End cta-two Area						    			
+		<!-- End cta-two Area -->					    			
 
-		<!-- start footer Area		 -->
+		<!-- Start Footer -->
 		<footer class="footer-area section-gap">
 			<div class="container">
 				<div class="row">
@@ -610,11 +619,11 @@
 						<div class="single-footer-widget">
 							<h4>Partner</h4>
 							<ul>
-								<li><a href="#">Badan Nasional Penanggulanggan Terorisme</a></li>
 								<li><a href="#">Kominfo</a></li>
+								<li><a href="#">Badan Nasional Penanggulanggan Terorisme</a></li>
 								<li><a href="#">BNPB</a></li>
 								<li><a href="#">POLRI</a></li>
-							</ul>									
+							</ul>								
 						</div>
 					</div>
 					<!-- <div class="col-lg-2 col-md-6 col-sm-6">
@@ -638,7 +647,7 @@
 								<li><a href="#">Agencies</a></li>
 							</ul>								
 						</div>
-					</div> -->
+					</div>																		 -->
 					<div class="col-lg-4  col-md-6 col-sm-6">
 						<div class="single-footer-widget">
 							<h4>Surat Kabar</h4>
@@ -699,14 +708,18 @@
 			});
 		</script>
 		<script>
-			$(document).ready(function(){
-				$("#myInput").on("keyup", function() {
-					var value = $(this).val().toLowerCase();
-					$("#textInput *").filter(function() {
-					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-					});
-				});
-			});
+				function liveSearch() {
+					let cards = document.querySelectorAll('.mix')
+					let search_query = document.getElementById("searchbox").value;
+					for (var i = 0; i < cards.length; i++) {
+						if(cards[i].innerText.toLowerCase()
+							.includes(search_query.toLowerCase())) {
+								cards[i].classList.remove("is-hidden");
+						} else {
+							cards[i].classList.add("is-hidden");
+						}
+					}
+				}
 		</script>
 	</body>
-</html>
+</html

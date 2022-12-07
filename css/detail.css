@@ -1,0 +1,36 @@
+.materi p{
+    color: rgb(251, 8, 8);
+   
+}
+
+.materi button {
+    display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	color: rgb(255, 255, 255);
+    background-color: rgb(251, 8, 8);
+	padding: 12px 10px 5px;
+	margin: 0 0px;
+	border-bottom: 4px solid transparent;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.materi li:hover > button{
+    color: rgb(251, 8, 8);
+  }
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+/* background author */
+.course-item .course-info .course-author .ca-pic {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	float: left;
+}
