@@ -168,7 +168,7 @@ if (typeof Object.create !== 'function') {
             singlePageNav.init(options, this);
         });
     };
-    
+
     $.fn.singlePageNav.defaults = {
         offset: 0,
         threshold: 120,
@@ -180,5 +180,5 @@ if (typeof Object.create !== 'function') {
         onComplete: false,
         beforeStart: false
     };
-    
+
 })(jQuery, window, document);
