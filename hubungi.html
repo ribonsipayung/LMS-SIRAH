@@ -29,6 +29,15 @@
 		<link rel="stylesheet" href="css/owl.carousel.css">			
 		<link rel="stylesheet" href="css/jquery-ui.css">			
 		<link rel="stylesheet" href="css/main.css">
+		<style>
+			.judul {
+				padding-top: 0%;
+				padding-bottom: 0%;
+			}
+			.section-gap {
+				padding: 50px 50px;
+			}
+		</style>
 	</head>
 	<body>	
 	  <!-- Atas Kanan -->
@@ -91,7 +100,7 @@
 	  </header>
   
 		<!-- start banner Area -->
-		<section class="banner-area relative about-banner" id="home">	
+		<section class="banner-area relative" id="home">	
 			<div class="overlay overlay-bg"></div>
 			<div class="container">				
 				<div class="row d-flex align-items-center justify-content-center">
@@ -111,13 +120,13 @@
 			<div class="container">
 				<div class="row">
 
-					<!--Start inputan File-->
-					<div ng-app="app">
+					<!-- Start inputan File -->
+					<!-- <div ng-app="app">
 						<div ng-controller="UploadController as vm">
 						  <div class="container">
 							<div class="page-header">
 							  <h1>Upload Materi</h1><br>
-							  <h6>Mafindo menyediakan tempat bagi Anda yang mau berbagi materi seputar Hoax.</h6>
+							  
 							</div>
 					  
 							<div class="alert alert-info">
@@ -142,13 +151,36 @@
 							</form>
 						  </div>
 						</div><br>
-					  </div>
+					  </div> -->
+
 					  <!--End inputan File-->
-
-					  
-
-
-					<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+					
+					<div class="map-wrap" style="width:100%; height: 445px;" id="map">
+					</div>
+					
+				</div>
+			</div>	
+		</section>
+		<!-- End map -->
+		<!-- judul -->
+		<section class="judul ">
+			<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-5 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Berbagi Materi Dengan Kami</h1>
+								<p>Mafindo menyediakan tempat bagi Anda yang mau berbagi materi seputar Hoax.
+								</p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<!-- judul end -->
+		<!-- konten hubungi  -->
+		<section class="contact-page-area section-gap">
+			<div class="container">
+				<div class="row">
 					<div class="col-lg-4 d-flex flex-column address-wrap">
 						<div class="single-contact-address d-flex flex-row">
 							<div class="icon">
@@ -190,20 +222,27 @@
 
 									<input name="subject" placeholder="Masukkan Subjek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukkan Subjek'" class="common-input mb-20 form-control" required="" type="text">
 								</div>
-								<div class="col-lg-6 form-group">
-									<textarea class="common-textarea form-control" name="message" placeholder="Masukan Pesan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukan pesan'" required=""></textarea>				
+								<div class="col-lg-6 form-group ">
+									<!-- <textarea class="common-textarea form-control" name="message" placeholder="Masukan Pesan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukan pesan'" required=""></textarea>	 -->
+									
+									<div class="costum-file">
+										<input type="file" class="custom-file-input" id="fileName" required="" name="doc">
+										<label name="doc" class="custom-file-label form-control" for="fileName" style="text-align: left;">Pilih dokumen</label>
+									</div>
+									
+											
 								</div>
 								<div class="col-lg-12">
-									<div class="alert-msg" style="text-align: left;"></div>
-									<button class="genric-btn primary" style="float: right;">Kirim Pesan</button>											
+										<div class="alert-msg" style="text-align: left;"></div>
+										<button class="genric-btn primary" style="float: right;">Kirim Pesan</button>											
 								</div>
 							</div>
 						</form>	
 					</div>
 				</div>
-			</div>	
+			</div>
 		</section>
-		<!-- End contact-page Area -->
+		
 
 		<!-- start footer Area -->		
 		<footer class="footer-area section-gap">

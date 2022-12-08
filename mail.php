@@ -2,8 +2,9 @@
     $to = 'demo@site.com';
     $name = $_POST["name"];
     $email= $_POST["email"];
-    $text= $_POST["message"];
+    $doc= $_POST["doc"];
     $subject= $_POST["subject"];
+    
     
 
 
