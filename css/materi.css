@@ -4,7 +4,7 @@
     display: inline-block;
 	font-size: 18px;
 	font-weight: 600;
-	color: #474747;
+	color: #000000;
 	padding: 12px 10px 5px;
 	margin: 0 10px;
 	border-bottom: 4px solid transparent;
@@ -173,7 +173,7 @@ a:hover{
 }
 
 input {
-    background-color: rgb(251, 8, 8);
+    background-color: #04091E;
 	font-size: 8px;
     border: none;
     color: white;
