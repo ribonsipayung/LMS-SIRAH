@@ -271,6 +271,7 @@ body {
 }
 .form-v4-content .form-detail .register:hover {
 	background: #020131;
+	color: #ffff;
 }
 .form-v4-content .form-detail .form-row-last input {
 	padding: 12.5px;
